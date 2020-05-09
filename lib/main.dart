@@ -3,7 +3,6 @@ import 'language.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -31,12 +30,8 @@ class MyApp extends StatelessWidget {
 }
 
 void main() => runApp(MaterialApp(
-
-  initialRoute: '/',
-
-  routes: {
-    '/': (context) => MyApp(),
-  },
-    
-  )
-);
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MyApp(),
+      },
+    ));
