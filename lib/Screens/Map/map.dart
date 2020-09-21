@@ -24,7 +24,7 @@ class _MapState extends State<Map> {
         GoogleMap(
           onMapCreated: onMapCreated,
           initialCameraPosition: CameraPosition(
-                  target: LatLng(40.7128, -74.0060), zoom: 10.0)
+                  target: LatLng(48.8647,2.3490), zoom: 18.0)
                 ) ,
   
         Positioned(

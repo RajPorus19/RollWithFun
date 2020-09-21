@@ -10,5 +10,5 @@ in these two files :
 
 android/app/src/main/AndroidManifest.xml
 
-ios/Runner/AppDelegate.m
+ios/Runner/AppDelegate.swift
 

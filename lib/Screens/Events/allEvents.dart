@@ -1,10 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:rollerApp/Shared/colors.dart';
-import 'package:rollerApp/Shared/textStyle.dart';
-import 'package:rollerApp/DeleteThisAfter/users.dart';
-import 'package:rollerApp/events/detailedEvent.dart';
-
+import 'package:newApp/Shared/colors.dart';
+import 'package:newApp/Shared/textStyle.dart';
+import 'package:newApp/Models/event.dart';
+import 'detailedEvents.dart';
 
 class AllEvents extends StatelessWidget {
 
@@ -21,13 +20,16 @@ class AllEvents extends StatelessWidget {
         builder: (context) => DetailedEvent(event: event,)));
       },
       child: Container(
-        width: 400,
-        height: 100,
+        width: 350,
+        height: 150,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(event.photo),
             fit: BoxFit.cover
+            
           ),
+            boxShadow: [BoxShadow(color: Colors.grey, offset: Offset(-4, 4), blurRadius: 4.0, spreadRadius: 1.0)],
+            borderRadius: BorderRadius.circular(25),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -55,19 +57,19 @@ class AllEvents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: textBgColor,
+      backgroundColor: white,
       appBar: AppBar(
-        backgroundColor: black,
+        backgroundColor: Colors.blue,
         title: Text("All events",// i18n
         style: TextStyle(
           fontFamily: "Oswald",
-          color: amber,
+          color: white,
         ),), 
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
+      body:SingleChildScrollView(
               child: Column(
-          
+           
           children: <Widget>[
             SizedBox(height:25),
             Center(child: Text('Here is all the events', // i18n

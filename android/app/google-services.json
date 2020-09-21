@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "986185295699",
+    "firebase_url": "https://roller-app-d8a31.firebaseio.com",
+    "project_id": "roller-app-d8a31",
+    "storage_bucket": "roller-app-d8a31.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986185295699:android:c3679eddec6ac3c0ec63a6",
+        "android_client_info": {
+          "package_name": "porus.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986185295699-fjlemoujm8non7eg9j9q4vk47s3dphpu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGnd05s6has0RcH3CD16BOt-VNEgH4_JA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986185295699-fjlemoujm8non7eg9j9q4vk47s3dphpu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

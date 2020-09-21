@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rollerApp/DeleteThisAfter/users.dart';
-import 'package:rollerApp/Shared/colors.dart';
-import 'package:rollerApp/Shared/textStyle.dart';
+import 'package:newApp/Models/event.dart';
+import 'package:newApp/Shared/colors.dart';
+import 'package:newApp/Shared/textStyle.dart';
 
 class DetailedEvent extends StatelessWidget {
   
@@ -11,9 +11,9 @@ class DetailedEvent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: textBgColor,
+      backgroundColor: white,
       appBar: AppBar(
-        backgroundColor: black,
+        backgroundColor: Colors.blue,
         title: Text(event.name,
         style:  titleStyle),
         centerTitle: true,
@@ -21,16 +21,18 @@ class DetailedEvent extends StatelessWidget {
       body: SingleChildScrollView(
         child:Column(
           children: <Widget>[
-          SizedBox(height: 5,),
+          SizedBox(height: 20,),
           Center(
             child: Container(
-            width: 400,
-            height: 300,
+            width: 350,
+            height: 450,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(event.photo),
                 fit: BoxFit.cover
               ),
+            boxShadow: [BoxShadow(color: Colors.grey, offset: Offset(-4, 4), blurRadius: 4.0, spreadRadius: 1.0)],
+            borderRadius: BorderRadius.circular(25),
             ),
           ),
           ),
@@ -40,7 +42,7 @@ class DetailedEvent extends StatelessWidget {
           SizedBox(width: 30,),
 
                   Icon(Icons.map,
-                  color: white,),
+                  color: Colors.blue,),
           SizedBox(width: 30,),
 
                   Text(event.location,
@@ -54,7 +56,7 @@ class DetailedEvent extends StatelessWidget {
           SizedBox(width: 30,),
 
                   Icon(Icons.calendar_today,
-                  color: white,),
+                  color: Colors.blue,),
           SizedBox(width: 30,),
 
                   Text(event.date,
@@ -69,7 +71,7 @@ class DetailedEvent extends StatelessWidget {
           SizedBox(width: 30,),
 
                   Icon(Icons.face,
-                  color: white,),
+                  color: Colors.blue,),
           SizedBox(width: 30,),
 
                   Text(event.creatorName,
@@ -81,31 +83,54 @@ class DetailedEvent extends StatelessWidget {
             ),
             SizedBox(height:20),
             Text("Description :",
-            style: titleStyle),
+            style: TextStyle(
+              color: Colors.blue,
+              fontFamily: 'Oswald',
+              fontSize: 30,
+            )),
             Container(
               padding: EdgeInsets.all(20),
               child:  Text(event.description,
               style: normalTextStyle),
             ),
              
-            SizedBox(height:40),
+            SizedBox(height:10),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 RaisedButton(
-                  onPressed: null,
-                  child: Text("I'm in"),
+                  onPressed: (){},
+                  child: Text("I'm in",
+                  style: TextStyle(color: white),),
+                   elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+              ),
+              color: Colors.lightBlue,
                 ),
                 RaisedButton(
-                  onPressed: null,
-                  child: Text("Ask for more details"),
+                  onPressed: (){},
+                  child: Text("Ask for more details",
+                  style: TextStyle(color: white),),
+                   elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+              ),
+              color: Colors.lightBlue,
                 ),
                 RaisedButton(
-                  onPressed: null,
-                  child: Text("Go !"),
+                  onPressed: (){},
+                  child: Text("Go !",
+                  style: TextStyle(color: white),),
+                   elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+              ),
+              color: Colors.lightBlue,
                 ),
               ],
-            )
+            ),
+            SizedBox(height:20),
           ],
         ),
       ),
